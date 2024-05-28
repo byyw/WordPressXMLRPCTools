@@ -32,7 +32,7 @@ jobs:
         run: |
           git diff
           git config --global user.email "1965610770@qq.com"
-          git config --global user.name "byyw"
+          git config --global user.name "test"
           git add .md_sha1 README.md
           git commit -m "Github Action auto Updated"
           git push
