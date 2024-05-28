@@ -33,6 +33,6 @@ jobs:
           git diff
           git config --global user.email "ykbyyw@gmail.com"
           git config --global user.name "byyw"
-          git add .md_sha1
+          git add .md_sha1 README.md
           git commit -m "Github Action auto Updated"
           git push
