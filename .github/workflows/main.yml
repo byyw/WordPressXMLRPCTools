@@ -1,4 +1,4 @@
-name: fangyuanxiaozhan
+name: byyw_blog
 on:
   push:
     branches:    

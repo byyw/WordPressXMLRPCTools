@@ -296,6 +296,6 @@ def main():
     # 4. 重建md_sha1_dic
     rebuild_md_sha1_dic(os.path.join(os.getcwd(), ".md_sha1"), os.path.join(os.getcwd(), "_posts"))
     # 5. 将链接信息写入insert_index_info_in_readme
-    insert_index_info_in_readme()
+    # insert_index_info_in_readme()
 
 main()
