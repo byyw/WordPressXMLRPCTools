@@ -7,4 +7,4 @@ categories:
 ---
 
 ## 这是一个文章模板
-test test test test
+让子弹飞一会。
