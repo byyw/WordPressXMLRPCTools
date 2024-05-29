@@ -266,6 +266,7 @@ def main():
             post_status = "publish"
             link = urllib.parse.quote(sha1_key , safe='').lower() 
             # content = markdown.markdown(content + href_info("https://"+domain_name+"/p/"+link+"/"), extensions=['tables', 'fenced_code'])
+            content = markdown.markdown(content, extensions=['tables', 'fenced_code'])
             # 如果文章无id,则直接新建
             if(("https://"+domain_name+"/p/"+link+"/" in link_id_dic.keys()) == False):
                 new_post(title, content, link, post_status, terms_names_post_tag, terms_names_category)
