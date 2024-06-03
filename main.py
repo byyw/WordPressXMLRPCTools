@@ -266,7 +266,8 @@ def main():
             title = metadata.get("title", "")
             terms_names_post_tag = metadata.get("tags",  domain_name)
             terms_names_category = metadata.get("categories", domain_name)
-            post_status = "publish"
+            # post_status = "publish"
+            post_status = metadata.get("status", "publish")
             link = urllib.parse.quote(sha1_key , safe='').lower() 
             # content = markdown.markdown(content + href_info("https://"+domain_name+"/p/"+link+"/"), extensions=['tables', 'fenced_code'])
             content = markdown.markdown(content, extensions=['tables', 'fenced_code'])
