@@ -254,7 +254,6 @@ def main():
     for md in md_list:
         # 计算md文件的sha1值，并与md_sha1_dic做对比
         sha1_key = os.path.basename(md).split(".")[0]
-        print("-----> "+md+"   "+sha1_key);
         sha1_value = get_sha1(md)
         # 如果sha1与md_sha1_dic中记录的相同，则打印：XX文件无需同步;
         if((sha1_key in md_sha1_dic.keys()) and ("hash_value" in md_sha1_dic[sha1_key]) and (sha1_value == md_sha1_dic[sha1_key]["hash_value"])):
