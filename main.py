@@ -289,7 +289,7 @@ def main():
                 edit_post(id, title, content, link, post_status, terms_names_post_tag, terms_names_category)
 
                 print("edit_post==>>", {
-                    "id": id, 
+                    "id": id,  
                     "title": title, 
                     "content": content,
                     "link": link,
