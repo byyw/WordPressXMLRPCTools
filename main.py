@@ -252,6 +252,7 @@ def main():
     print(md_list)
 
     for md in md_list:
+        print("开始同步 "+md)
         # 计算md文件的sha1值，并与md_sha1_dic做对比
         sha1_key = os.path.basename(md).split(".")[0]
         sha1_value = get_sha1(md)
