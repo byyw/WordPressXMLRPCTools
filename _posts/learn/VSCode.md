@@ -1,7 +1,7 @@
 ---
 title: VSCode 的应用
 tags:
-- vscode
+- VSCode
 categories:
 - 学习
 ---
