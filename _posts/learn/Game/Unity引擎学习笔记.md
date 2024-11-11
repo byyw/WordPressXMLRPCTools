@@ -49,9 +49,128 @@ categories:
 
 ### 03 动起来，下载与安装
 
+> 20241108
 
+​	从[Unity](https://unity.com/)官网上下载 Unity Hub ，这是 Unity 的版本管理工具，然后在Unity Hub 中下载标签为 LST 的稳定版本的 Unity，之后等待安装完成即可。
+
+​	这一步照着视频来就行，基本不会出什么问题。
+
+### 04 你好，编辑器
+
+​	本节内容首先是创建一个空的 3D 项目，进入项目的开发界面后，再逐个介绍整个界面的菜单内容、配置、布局与窗口。因为我初接触，也不是很熟，这里就不多赘述了。另外，我在全程的学习过程中是准备全英文的，所以看起来比较费劲。但怎么说呢，英语，这个纠缠了我一生的学科，也是时候去面对了。
+
+![Unity_pZolgJ2cYg](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/08-ef43e2892b6acc7f32f3e8b554692b79-08-ef43e2892b6acc7f32f3e8b554692b79-Unity_pZolgJ2cYg.webp)
+
+### 05 迈出第一步，创建游戏物体
+
+​	本届主要是熟悉了下如何创建 3D 对象（物体），也就是一些简单的几何体，分别为立方体（cube）、球（sphere）、胶囊（capsule）、圆柱（cylinder）、平面（plane）、四边形（quad）。做出如下图的效果我稍微调了下各物体的坐标与方向，果然在 2d 屏幕中整 3d 的东西还是有点难度的。
+
+![Unity_WB8olh3PK6](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/08-43c7bb2691bdde1dd02d99e8a1d040f0-Unity_WB8olh3PK6.webp)
+
+> 20241110
+
+### 06 初中就学过？记录位置的坐标系
+
+- x 横轴，y 纵轴，z 斜轴。
+
+- 左手坐标系，z 轴正方向朝里；右手坐标系，z 轴正方向朝外。
+
+- 全局世界坐标系，父物体的本地坐标系。
+
+- 父子关系中，中心原点，轴心原点。
+
+- 物体的移动操作杆，有相对世界方向的模式与相对物体方向的模式。
+
+### 07 迟早用熟，对物体的基本操作
+
+![Unity_BJuDQOrOAC](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-b746128edf86a0ac6a827c2a9bf08f06-Unity_BJuDQOrOAC.webp)
+
+- View Tool，移动画面。
+
+- Move Tool，移动对象。
+
+- Rotate Tool，旋转物体。
+
+- Scale Tool，缩放物体。
+
+- Rect Tool，缩放物体（2d视图）。
+
+- Transform Tool，综合工具。
+
+- Edit bounding volume，编辑体积，用于碰撞？
+
+​	另外，上述7个工具，对应的快捷键是Q、W、E、R、T、Y、U。
+
+### 08 高大上了！快来导入游戏模型
+
+​	主要讲的是资源的导入与导出。额外介绍了一些物体的渲染，材质（Shader），贴图的内容。
+
+### 08.5 使用 blender 将 pmx 模型转为 fbx 并导入 Unity
+
+​	因为想整这个东西，所以前后弄了快4个小时了，好在最后成功搞定了。那么，流程如下：
+
+1、首先是从[模之屋](https://www.aplaybox.com/)中下载了一个模型，为 MMD 模型的荧宝，此时下载下来的模型格式为 pmx 格式。
+
+![chrome_ute5hSXjcq](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-b6639442cb8eab5294e5a29ebc1e2641-chrome_ute5hSXjcq.webp)
+
+2、之后选择一个 3D 建模软件，我这里选择了 [Blender](https://www.blender.org/)，并选择了 **4.2.3 LST** 版本进行安装下载。需要注意的是不同版本之间，其支持的插件也有些不同，就比如下一步说的 CATS ，而且在网上查找 Blender 的问题时，也需要注意对应的版本。
+
+3、安装完成后，这时并不支持 pmx 格式的模型导入，所以需要往 Blender 中安装 CATS 插件。这个插件我找到的有两种，一种是支持 **Blender 2.93** 的 [CATS](https://github.com/absolute-quantum/cats-blender-plugin)，另一种是支持 Blender 更后面版本的 [CATS](https://github.com/teamneoneko/Cats-Blender-Plugin-Unofficial-)，选择的时候要注意版本匹配。
+
+将插件下载到本地，下载成功后不需要解压，保持 zip 格式即可。之后进入 Blender 中，在 **Edit -> Preferences  -> Add-ons -> Install from Disk** 这个路径下，选中你下载到本地的插件压缩包，安装即可。
+
+![](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-b887101220d6904063f6f0073514a76f-blender_QY4nNUnOu8.webp)
+
+4、在 Blender 中，通过 **CATS -> Quick Access -> Import Model** 导入你下载的 pmx 模型。
+
+![blender_U93S2JAJIF](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-17e487b4e2222f72cd6807bb67836245-blender_U93S2JAJIF.webp)
+
+5、导入成功后，这时还是个白模，如果需要贴图，可以再右上角切换下显示，等待一会渲染出贴图。
+
+![blender_zlma40t5ph](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-53952d6e0c4ef23806100c100dabc9c5-blender_zlma40t5ph.webp)
+
+6、之后要将这个模型的所有部件的材质合并为一个。路径在 **CATS -> Optimization** 中。不过这时在 Optimization 栏目下会提示你安装一个新的插件，按照提示下载安装即可。之后通过 **Save Atlas to** 操作将所有材质合并为一个 png 图片材质。同时，荧的模型上的材质也会被替换，这时会出现因为透明度导致的色块呈黑块问题，特别在头发上。
+
+虽然这是个【问题】，不过我暂时没去解决，等到后续学习 Blender 的时候再去关注下，现在还是先关注 Unity 吧。
+
+![blender_B06L3NdlYe](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-3e0efc0e1624824fe0f4c53e26bcbe5f-blender_B06L3NdlYe.webp)
+
+7、将模型导出为 fbx 格式。如果你们进行过操作6，会因为材质太多而导致导出时无法将材质一并导出，再导入到 Unity 中就只是白模了，这里卡了我好久。而且我感觉也不一定时材质数量的【问题】，应该还有那处没被我注意到的，还是留到后续再研究吧。
+
+另，导出的路径在 **File -> Export -> FBX** ，在弹出的窗口选择导出路径，并配置导出选项。之后得到一个 fbx 文件与一个材质文件夹。
+
+- Path Mode: Copy，表示会将材质资源一并导出，如果点上后面的文件夹图标，会将材质进一步包装进 fbx 文件中，这样最后导出的就只有一个 fbx 文件了。
+- Limit to: Selected Objects，表示只导出选中的对象，而这时我已经选中了荧的模型，不然可能连骨架（可是是骨架吧）一并导出。
+
+![blender_491gMBBDXV](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-c6f7aa2766f14a18cf662b874568f916-blender_491gMBBDXV.webp)
+
+![explorer_W176hyUmnE](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-c61a70b92764598c829b9feac5e8f623-explorer_W176hyUmnE.webp)
+
+8、之后就可以将 fbx 格式的荧的模型导入到 Unity 中了。不过这时还会出现因为材质的透明度而导致的黑色色块的原因。
+
+![Unity_8qRXoFnKiy](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-bf6531e43de1e301889d888733316f22-Unity_8qRXoFnKiy.webp)
+
+9、这时我们就需要修改材质球了，因为默认的材质球是不允许修改的，所以我们直接拷贝出来一个，并将其 **Rendering Mode** 修改为 **Cutout**，再将这个材质球应用到模型上即可。
+
+ps：网上找到时候说需要将这个模式改为 Transparent ，但实际试下来感觉不对，之后无意间又试了 Cutout ，发现这个的效果才对。至于为什么要选这个，现阶段还是不知道，先把这个【问题】记录下，等 Unity 学完再看。
+
+![Unity_ia0kUq2Qm8](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2024/11/10-c8e0bf68376ae6055b6ca5eda1b91933-Unity_ia0kUq2Qm8.webp)
+
+> 20241111
+
+### 09 没有资源？商城对你说NO
+
+​	本节介绍了 Unity 的[资源商店](https://assetstore.unity.com/zh-CN)，以及资源下载，资源导入，资源管理相关的内容。
+
+### 10 有山有路有悬崖？来创建个地形吧
+
+​	本节介绍了地形对象，包含创建地形模型，对地形进行扩展，编辑（抬高、降低、山洞）等操作。
+
+​	另外在场景绘制中，其坐标系，最小的单位1，可能表示1m。
 
 
 
 ## 学习后
+
+
 
