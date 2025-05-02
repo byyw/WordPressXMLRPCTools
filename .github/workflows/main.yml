@@ -14,15 +14,21 @@ jobs:
           operating-system: ['ubuntu-latest']
       steps:
       - uses: actions/checkout@v3 # Checking out the repo
+
+
+
       - name: Run with setup-python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
           cache: 'pipenv'
-      - name: Install pipenv
-        run: pip3 install --user pipenv
-      - name: Install dependecies
-        run:  pipenv --python python3 && pipenv install
+      - name: Install dependencies
+        run: |
+          python -m pip install pipenv
+          pipenv --python 3.9 install  # 强制使用 3.9
+
+
+
       - name: Build
         env:
           USERNAME: ${{ secrets.USERNAME }}
