@@ -246,7 +246,129 @@ Destroy(n);
 
 Time 对象的介绍。
 
-待定。。。
+### 25 路径权限要理清，Application很重要
+
+```C#
+// 游戏数据文件夹路径（只读，打包后会加密压缩）
+Application.dataPath;
+// 持久化文件夹路径（读写）
+Application.persistentDataPath;
+// StreamingAssets文件夹路径（只读，打包后不加密）
+Application.streamingAssetsPath;
+// 临时文件夹
+Application.temporaryCachePath;
+// 打开url
+Application.OpenURL("");
+// 退出游戏
+Application.Quit();
+```
+
+Application 在不同系统下获得的路径不同
+
+### 26 需要切换场景？场景类你一定要了解
+
+```C#
+// 场景类，场景管理类
+SceneManager;
+Scene;
+```
+
+对于场景（可以理解为画面、地图、窗口之类的）的创建、切换、叠加、销毁之类的操作。
+
+### 27 异步加载场景并获取进度
+
+```c#
+AsyncOperation operation;
+void Start(){
+	// 创建一个协程
+	StartCoroutine(loadScene());
+}
+// 协程方法，用来异步加载场景
+IEnumerator loadScene(){
+	operation = SceneManager.LoadSceneAsync("sceneName");
+	yield return operation;
+}
+
+void Update(){
+    // 加载进度(0-0.9)
+	Debug.Log(operation.progress);
+}
+
+```
+
+也有场景的自动/手动跳转的控制。
+
+### 28 位置旋转缩放来聚齐，了解Transform
+
+控制物体的位置、大小、方向、父子关系。
+
+### 29 电脑游戏操作方式？键盘鼠标来报道
+
+Input类。
+
+### 30 操作需要兼容与过度？虚拟轴的使用
+
+类似于手柄上的操作杆，用于兼容多个输入设备。还有虚拟按键的概念。
+
+### 31 手机平板要触屏？触摸方法使用
+
+```
+// 开启多点触摸
+Input.multiTouchEnabled = true;
+```
+
+仍然是 Input 类的应用。
+
+### 32 红的绿的蓝的，巧用灯光与烘焙
+
+因为灯光在运行中需要实时计算，所以可以在灯光设置好后，通过烘焙操作将此时的灯光效果生成一个预设（生成一个贴图），直接应用。
+
+### 33 做个好导演，选择合适的摄像机
+
+透视摄像机，正交摄像机。两种效果不同的摄像机
+
+天空盒。决定拍摄出来的大背景。
+
+深度，将不同摄像机拍摄的内容合成。不是很能理解，合成？
+
+镜面，远面。
+
+目标纹理，目标显示。可以获取拍摄画面的数据，用于他途。
+
+### 34 让游戏的灵魂升华，添加声音吧
+
+Audio Source 组件。
+
+### 35 在游戏中看电视？视频播放
+
+Video Player 组件。
+
+配合目标纹理，实现输出。
+
+### 36 让角色动起来！角色控制器的使用
+
+Character Controller 组件。
+
+### 37 模拟现实！给物体添加重力
+
+Rigidbody 组件。给物体添加刚体这一物理特性。
+
+### 38 篮球碰到地面？碰撞的产生与监听
+
+XX Collider 组件。
+
+```C#
+// 监听发生碰撞
+private void OnCollisionEnter(Collision collision){}
+// 持续碰撞
+private void OnCollisionStay(Collision collision){}
+// 结束碰撞
+private void OnCollisionExit(Collision collision){}
+```
+
+### 39 踩到机关触发陷阱！触发与碰撞区别
+
+
 
 ## 学习后
 
