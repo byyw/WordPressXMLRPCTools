@@ -304,7 +304,7 @@ void Update(){
 
 ### 29 电脑游戏操作方式？键盘鼠标来报道
 
-Input类。
+Input 对象。
 
 ### 30 操作需要兼容与过度？虚拟轴的使用
 
@@ -367,6 +367,61 @@ private void OnCollisionExit(Collision collision){}
 ```
 
 ### 39 踩到机关触发陷阱！触发与碰撞区别
+
+```c#
+private void OnTriggerEnter(Collider other){}
+private void OnTriggerStay(Collider other){}
+private void OnTriggerExit(Collider other){}
+```
+
+### 40 铰链、弹簧，特殊的物理关节
+
+Hinge Joint 组件，铰链关节。
+
+Spring Joint 组件，弹簧关节。
+
+Fixed Joint 组件，固定关节。
+
+### 41 冰面与地面，物理材质的影响 
+
+物理材质。
+
+### 42 游戏中的红外线，射线检测
+
+Ray 对象。
+
+```c#
+Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+RaycastHit hit;
+bool res = Physics.Raycast(ray,out hit);
+if(res == true){
+	Debug.Log(hit.point);
+}
+```
+
+### 43 可以了解下，粒子系统的基本使用
+
+Particle System 组件。
+
+### 44 绘制一个彩色线条和拖尾吧
+
+Line Renderer 组件。
+
+### 45 为游戏物体制作简单的动画吧(Animation)
+
+Animation 组件。
+
+### 46 为游戏物体制作简单的动画吧(Animator)
+
+Animator 组件。
+
+### 47 让角色动起来！角色动画的使用
+
+Animator 组件。关于过渡相关的内容。
+
+### 48 使用按键来控制角色运动吧
+
+Animator 组件。应用。
 
 
 
