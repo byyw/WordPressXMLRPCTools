@@ -170,9 +170,9 @@ printf("hello world");
 **视频**：
 
 ```html
-<iframe height="500" src="//player.bilibili.com/player.html?aid=37070225&bvid=BV15t411X7Tn&cid=65141853&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe height="666" width="100%" src="//player.bilibili.com/player.html?aid=37070225&bvid=BV15t411X7Tn&cid=65141853&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 ```
-<iframe height="500" src="//player.bilibili.com/player.html?aid=37070225&bvid=BV15t411X7Tn&cid=65141853&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe height="666" width="100%" src="//player.bilibili.com/player.html?aid=37070225&bvid=BV15t411X7Tn&cid=65141853&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 小结
 
