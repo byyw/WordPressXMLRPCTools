@@ -2,6 +2,8 @@
 title: 【课题】fgo（结）
 categories:
 - 课题
+- 娱乐
+tags:
 - 游戏
 ---
 
