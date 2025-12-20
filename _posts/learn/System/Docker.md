@@ -12,7 +12,45 @@ categories:
 
 ## Docker 是啥
 
-todo 后续补充
+> Docker 官网：[Docker](https://www.docker.com/)
+>
+> 参考资料：[Docker 菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)
+
+~~删除第一次，原样的复制黏贴。~~
+
+~~删除第二次，在第一次的基础上调整为QA的方式，但感觉有点小题大作了。~~
+
+目前为止，我的实际需求是会用就行，以及了解一些关键概念。所以第一步，是粗读一遍，然后记录关键词即可。包含目录结构之类的，略过。
+
+容器（Container），镜像（Image），仓库（Registry），Dockerfile
+
+```
+docker ps
+CONTAINER ID: 容器 ID。
+IMAGE: 使用的镜像。
+COMMAND: 启动容器时运行的命令。
+CREATED: 容器的创建时间。
+STATUS: 容器状态。
+    created（已创建）
+    restarting（重启中）
+    running 或 Up（运行中）
+    removing（迁移中）
+    paused（暂停）
+    exited（停止）
+    dead（死亡）
+PORTS: 容器的端口信息和使用的连接类型（tcp\udp）。
+NAMES: 自动分配的容器名称。
+```
+
+容器互联
+
+Dockerfile，镜像构建
+
+Compose，多容器应用构建
+
+Machine，管理多服务器上的 Docker 服务
+
+Swarm，管理多个服务器上的 Docker 容器
 
 ## 如何使用
 
@@ -213,3 +251,4 @@ docker run -d \
 ### Rclone
 
 这是个备份工具，TODO 待定
+
