@@ -252,3 +252,40 @@ docker run -d \
 
 这是个备份工具，TODO 待定
 
+## Docker Desktop
+
+Windows 下的 Docker 管理工具，依赖 WSL （运行在 Windows 下的 Linux 子系统）
+
+- 下载的 images 位置在哪
+
+  新版本（29.1.3）存放在自定义位置（setting - Resources - Disk image location），默认在 C，改到 E 了。
+
+  找的了位置，但是看不了，神烦。
+
+  又似乎不对，是否需要放弃docker desktop，只玩 docker。
+
+  行吧，暂时忽视这个问题。而对于 docker 的使用，还是原教旨主义的基于命令行与文件进行。
+
+- 自低向上
+
+  基础镜像 （docker pull 拉取）
+
+  dockerfile 额外依赖 应用程序
+
+  docker build [dockerfile] 得到容器镜像
+
+  docker register （docker push/pull）镜像仓库 推拉容器镜像
+
+  docker run [容器镜像] 得到运行的容器
+
+  周边
+
+  - docker compose
+
+    docker-compose up 按自定的 yaml 配置文件部署多容器，实现一套服务
+
+  - docker swarm / k8s 
+
+    一套服务在多服务器的集群部署
+
+  行了，到此为止，不要因小失大，关注我的主要意图，是安装 mysql
