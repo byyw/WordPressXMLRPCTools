@@ -8,7 +8,7 @@ categories:
 
 ![29899943_p0.png](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2025/08/08-786e45a96d571e1de1bb08300f4add08-29899943_p0.png.webp)
 
-# 统子
+# 统子（暂定）
 
 > 【todo】：待办事项
 
@@ -30,15 +30,15 @@ categories:
 
 ## 需求分析 0.0.0
 
-账户，资金，任务列表。
+基础功能：用户管理
 
-任务列表，增（标题，描述，时间，金额），删，改（标记完成，并转账），查。
+核心功能：任务相关（添加，编辑，分类组织），提醒功能，同步功能
 
-【todo】是否需要拆分主账号、子账号，类似于监管那样。
+平台：Web、Android、Windows
 
-平台：安卓端，开发语言：Flutter + Java + MySQL。
+## 开源项目
 
-## 开发方案
+
 
 
 
