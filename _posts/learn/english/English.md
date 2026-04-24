@@ -1,5 +1,5 @@
 ---
-title: 【English】学习总纲
+title: 【总纲】English
 tags:
 - 总纲
 categories:
@@ -11,7 +11,7 @@ categories:
 
 ![134718880_p0.png](https://byyw-oss1.oss-cn-hangzhou.aliyuncs.com/img/2025/09/08-3a7b10f80c78acf31be6739e7e791ec5-134718880_p0.png.webp)
 
-# English
+# 【总纲】English
 
 ## 【课题】250908-English(结)
 
