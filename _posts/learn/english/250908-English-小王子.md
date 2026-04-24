@@ -1,7 +1,6 @@
 ---
 title: 【课题】250908-English-小王子
 categories:
-- 课题
 - 学习
 tags:
 - 考研

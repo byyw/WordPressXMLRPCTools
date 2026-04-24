@@ -1,7 +1,6 @@
 ---
 title: 【课题】游戏王Master Duel（结）
 categories:
-- 课题
 - 娱乐
 tags:
 - 游戏
