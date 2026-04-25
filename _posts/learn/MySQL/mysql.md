@@ -1,10 +1,10 @@
 ---
 title: 【MySQL】一些问题记录
-tags:
-- MySQL
 categories:
 - 学习
 - 数据库
+tags:
+- MySQL
 ---
 # 一些问题记录
 
