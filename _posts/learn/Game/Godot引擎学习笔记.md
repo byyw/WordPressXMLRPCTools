@@ -22,3 +22,9 @@ tags:
 
 界面：项目管理器、Godot 编辑器。
 
+## 源码
+
+研究源码环节，目前，使用 VSCode（插件：C/C++，clangd）、MinGW-w64/GCC、SCons、cppdbg，达成了对源码进行编译、运行、调试。
+
+## GDExtension
+
