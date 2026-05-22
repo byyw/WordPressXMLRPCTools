@@ -39,7 +39,7 @@ tags:
 
 ---
 
- ```mermaid
+```mermaid
  mindmap
       root((MySQL))
         :::rootClass
@@ -69,7 +69,7 @@ tags:
  
     %% 样式定义
     %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'primaryTextColor': '#0d47a1', 'primaryBorderColor': '#1565c0', 'lineColor': '#1565c0', 'fontFamily': 'Arial' } } }%%
- ```
+```
 
 ---
 
