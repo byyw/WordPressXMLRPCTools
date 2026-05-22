@@ -37,37 +37,41 @@ tags:
 
 #### 第 1 章，MySQL 架构与历史
 
-> ```mermaid
-> mindmap
->      root((MySQL))
->        :::rootClass
->        架构
->          :::categoryClass
->          网路层
->            :::leafClass
->            连接、认证
->            线程
->          服务层
->          存储引擎
->            InnoDB
->            MyISAM
->            其他：Archieve、Memory、CSV、NDB
->        并发
->          :::categoryClass
->          锁
->            :::leafClass
->            写锁、读锁
->            锁粒度、锁策略：表锁、行锁
->            死锁
->          事务
->         ACID：原子性、一致性、隔离性、持久性
->            隔离级别：未提交读（脏读）、提交读、可重复读（幻读）、串行化
->            事务日志、AUOTOCOMMIT 模式
->            MVCC（多版本并发控制）、乐观锁、悲观锁
-> 
->    %% 样式定义
->    %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'primaryTextColor': '#0d47a1', 'primaryBorderColor': '#1565c0', 'lineColor': '#1565c0', 'fontFamily': 'Arial' } } }%%
->    ```
+---
+
+ ```mermaid
+ mindmap
+      root((MySQL))
+        :::rootClass
+        架构
+          :::categoryClass
+          网路层
+            :::leafClass
+            连接、认证
+            线程
+          服务层
+          存储引擎
+            InnoDB
+            MyISAM
+            其他：Archieve、Memory、CSV、NDB
+        并发
+          :::categoryClass
+          锁
+            :::leafClass
+            写锁、读锁
+            锁粒度、锁策略：表锁、行锁
+            死锁
+          事务
+         ACID：原子性、一致性、隔离性、持久性
+            隔离级别：未提交读（脏读）、提交读、可重复读（幻读）、串行化
+            事务日志、AUOTOCOMMIT 模式
+            MVCC（多版本并发控制）、乐观锁、悲观锁
+ 
+    %% 样式定义
+    %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'primaryTextColor': '#0d47a1', 'primaryBorderColor': '#1565c0', 'lineColor': '#1565c0', 'fontFamily': 'Arial' } } }%%
+ ```
+
+---
 
 - 1.1：架构图：网络层，MySQL 服务层，存储引擎层
 
