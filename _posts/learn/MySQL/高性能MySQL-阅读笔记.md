@@ -39,7 +39,7 @@ tags:
 
 ---
 
-```mermaid
+ ```mermaid
  mindmap
       root((MySQL))
         :::rootClass
@@ -66,10 +66,9 @@ tags:
             隔离级别：未提交读（脏读）、提交读、可重复读（幻读）、串行化
             事务日志、AUOTOCOMMIT 模式
             MVCC（多版本并发控制）、乐观锁、悲观锁
- 
-    %% 样式定义
-    %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'primaryTextColor': '#0d47a1', 'primaryBorderColor': '#1565c0', 'lineColor': '#1565c0', 'fontFamily': 'Arial' } } }%%
-```
+ %% 样式定义
+ %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'primaryTextColor': '#0d47a1', 'primaryBorderColor': '#1565c0', 'lineColor': '#1565c0', 'fontFamily': 'Arial' } } }%%
+ ```
 
 ---
 
@@ -198,7 +197,45 @@ tags:
 
 看完了，这章内容偏向于记忆性理论，以及一些实践。
 
+#### 第 5 章，创建高性能的索引
 
+- 5.1：在索引中找到值，根据值找到数据行。多列索引，列顺序。
+
+- 5.1.1：
+
+  B-Tree：全键、键值范围、键前缀、排序
+
+  哈希：Memory引擎，等值比较，哈希冲突，InnoDB的自适应哈希索引，自定义哈希索引（使用 B-Tree 模拟、维护）
+
+  空间数据（R-Tree）
+
+  全文索引
+
+- 5.2：优点：减少扫描数据量、避免排序与临时表、将随机 I/O 变为顺序 I/O
+
+- 5.3：创建和使用索引
+
+- 5.3.1-4：独立列、索引的选择性、多列索引、索引列顺序
+
+- 5.3.5：聚簇索引，InnoDB 底层的数据存储方式，数据页
+
+- 5.3.6：覆盖索引，指不需要访问数据行，仅通过索引即可获得全部数据
+
+- 5.3.7：使用索引进行排序
+
+- 5.3.8：压缩索引（MyISAM）
+
+- 5.3.9-10：冗余、重复、未使用索引
+
+- 5.3.11：锁
+
+- 5.4：案例
+
+- 5.5：维护
+
+- 5.6：总结
+
+前 3 节还是认真看的，后面就跳过了。
 
 ## 阅读后
 
