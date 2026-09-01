@@ -249,6 +249,7 @@ def main():
     # 3. 开始同步
     # 读取_posts目录中的md文件列表
     md_list = get_md_list(os.path.join(os.getcwd(), "_posts"))
+    md_list.sort()
     print(md_list)
 
     for md in md_list:
